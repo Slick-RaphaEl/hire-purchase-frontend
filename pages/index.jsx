@@ -1,6 +1,6 @@
 import Head from 'next/head';
-
 import Nav from '../components/Nav';
+import Carousel from '../components/Carousel';
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
       </Head>
 
       <Nav />
+      <Carousel />
     </div>
   )
 }
