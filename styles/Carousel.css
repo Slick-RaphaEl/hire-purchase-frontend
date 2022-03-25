@@ -3,12 +3,16 @@
   width: 100%;
 }
 
+.unselected-slide {
+  padding: 30px;
+}
+
 .carousel {
   position: relative;
 }
 
 .carousel > h2 {
-  color: #689f38;
+  color: #3AF90C;
   font-weight: 800;
   font-size: 48px;
   font-style: italic;
