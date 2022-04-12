@@ -7,7 +7,7 @@ const ProfilePage = () => {
     <MainLayout>
       <Profile />
     </MainLayout>
-  );
+    );
 };
 
 export default ProfilePage;
