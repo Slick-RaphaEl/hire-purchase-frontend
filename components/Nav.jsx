@@ -36,10 +36,12 @@ const Nav = () => {
               CONTACT US
             </a>
           </li>
+
           <li className="mx-4">
-            <a className="text-lg font-normal text-black" href="#">
+            <a className="text-lg font-normal text-black" href="/programmes">
               APPLY
             </a>
+
           </li>
           <li className="mx-4">
             <a className="text-lg font-normal text-black" href="#">
