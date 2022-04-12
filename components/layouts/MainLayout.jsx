@@ -10,6 +10,7 @@ export default function MainLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
+    
       {children}
     </div>
   );
