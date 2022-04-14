@@ -10,16 +10,16 @@ const Nav = () => {
   }
   return (
     <div>
-    <nav className="w-full bg-gray-400  h-20 flex items-center">
+    <nav className="nav-header w-full bg-gray-400  h-20 flex items-center">
       <div className="w-96">
         <h1 className="text-center text-4xl font-bold">
-          <span className="project-green-text">HIRE</span> PURCHASE
+          <span className="project-green-text navbar-logo">HIRE</span> PURCHASE
         </h1>
       </div>
       <div className=" hidden md:flex flex-row flex w-3/4 justify-end items-center mr-20">
         <ul className="flex ">
           <li className="mx-4">
-           <span className="project-green-text"><a className="text-lg font-normal" href="#">
+           <span className="project-green-text navbar-home"><a className="text-lg font-normal" href="#">
               HOME
             </a>
             </span>
@@ -36,10 +36,12 @@ const Nav = () => {
               CONTACT US
             </a>
           </li>
+
           <li className="mx-4">
-            <a className="text-lg font-normal text-black" href="#">
+            <a className="text-lg font-normal text-black" href="/programmes">
               APPLY
             </a>
+
           </li>
           <li className="mx-4">
             <a className="text-lg font-normal text-black" href="#">
