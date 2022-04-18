@@ -12,7 +12,7 @@ const Application = () => {
           <form>
             <div className="form-group mb-3">
               <label
-                for="name"
+                htmlFor="name"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
@@ -37,7 +37,7 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="name"
+                htmlFor="name"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
@@ -62,7 +62,7 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="email"
+                htmlFor="email"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
@@ -87,15 +87,15 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="password"
-                class="form-label inline-block mb-2 text-gray-700"
+                htmlFor="password"
+                className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
                 Password
               </label>
               <input
                 type="password"
-                class="form-control
+                className="form-control
                       block
                       w-3/4
                       h-11
@@ -112,14 +112,14 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="gender"
-                class="form-label inline-block mb-2 text-gray-700"
+                htmlFor="gender"
+                className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
                 Your gender
               </label>
               <select
-                class="form-select appearance-none
+                className="form-select appearance-none
                       block
                       w-3/4
                       h-11
@@ -141,9 +141,9 @@ const Application = () => {
         </div>
         <div className="basis-1/2 w-full">
           <form>
-            <div class="form-group mb-3">
+            <div className="form-group mb-3">
               <label
-                for="address"
+                htmlFor="address"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 Street Address
@@ -167,7 +167,7 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="city"
+                htmlFor="city"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
@@ -198,7 +198,7 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="state"
+                htmlFor="state"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 State
@@ -228,7 +228,7 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="age"
+                htmlFor="age"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 Age
@@ -255,7 +255,7 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                for="number"
+                htmlFor="number"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 NIN
