@@ -19,13 +19,13 @@ const Nav = () => {
       <div className=" hidden md:flex flex-row flex w-3/4 justify-end items-center mr-20">
         <ul className="flex ">
           <li className="mx-4">
-           <span className="project-green-text navbar-home"><a className="text-lg font-normal" href="#">
+           <span className="project-green-text navbar-home"><a className="text-lg font-normal" href="/">
               HOME
             </a>
             </span>
           </li>
           <li className="mx-4">
-            <Link href="/profile">
+            <Link  href="/profile" >
               <a className="text-lg font-normal text-black">
                 PROFILE
               </a>
