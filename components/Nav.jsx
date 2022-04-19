@@ -19,35 +19,43 @@ const Nav = () => {
       <div className=" hidden md:flex flex-row flex w-3/4 justify-end items-center mr-20">
         <ul className="flex ">
           <li className="mx-4">
-           <span className="project-green-text navbar-home"><a className="text-lg font-normal" href="#">
+            <Link href="/">
+            <a className="text-lg font-normal project-green-text navbar-home">
               HOME
             </a>
-            </span>
+            </Link>
+          
           </li>
           <li className="mx-4">
-            <Link href="/profile">
+            <Link  href="/profile" >
               <a className="text-lg font-normal text-black">
                 PROFILE
               </a>
             </Link>
           </li>
           <li className="mx-4">
-            <a className="text-lg font-normal text-black" href="#">
+            <Link href="#">
+            <a className="text-lg font-normal text-black">
               CONTACT US
             </a>
+            </Link>
           </li>
 
           <li className="mx-4">
-            <a className="text-lg font-normal text-black" href="/programmes">
+            <Link href="/programmes">
+            <a className="text-lg font-normal text-black">
               APPLY
             </a>
-
+            </Link>
           </li>
+
           <li className="mx-4">
-            <a className="text-lg font-normal text-black" href="#">
+            <Link  href="#" >
+            <a className="text-lg font-normal text-black">
               REVIEWS
             </a>
-          </li>
+            </Link>
+            </li>
         </ul>
         </div> 
         <HiMenu 

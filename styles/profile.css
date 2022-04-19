@@ -1,0 +1,36 @@
+.profile-header{
+    text-align:center;
+}
+.profile-header h2{
+    padding:0;
+    margin:0;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+.profile-header-details{
+  background:#ddd;  
+  min-height:150px;
+  width:150px;
+  margin:2rem auto 0 auto;
+  border-radius:50%;
+  border:0px solid red;
+}
+.profile-body{
+    max-width:1200px;
+    min-height:300px;
+    margin:2rem auto;
+    background:rgb(200, 206, 200);
+}
+.profile-body dl{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    padding:2rem;
+    align-items:center;
+}
+.profile-body dl dt{
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+
