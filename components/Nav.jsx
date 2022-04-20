@@ -19,41 +19,31 @@ const Nav = () => {
       <div className=" hidden md:flex flex-row flex w-3/4 justify-end items-center mr-20">
         <ul className="flex ">
           <li className="mx-4">
-            <Link href="/">
-            <a className="text-lg font-normal project-green-text navbar-home">
+            <Link href="/" className="text-lg font-normal project-green-text navbar-home">
               HOME
-            </a>
             </Link>
           
           </li>
           <li className="mx-4">
-            <Link  href="/profile" >
-              <a className="text-lg font-normal text-black">
+            <Link  href="/profile" className="text-lg font-normal text-black">
                 PROFILE
-              </a>
             </Link>
           </li>
           <li className="mx-4">
-            <Link href="#">
-            <a className="text-lg font-normal text-black">
+            <Link href="#" className="text-lg font-normal text-black">
               CONTACT US
-            </a>
             </Link>
           </li>
 
           <li className="mx-4">
-            <Link href="/programmes">
-            <a className="text-lg font-normal text-black">
+            <Link href="/programmes" className="text-lg font-normal text-black">
               APPLY
-            </a>
             </Link>
           </li>
 
           <li className="mx-4">
-            <Link  href="#" >
-            <a className="text-lg font-normal text-black">
+            <Link  href="#" className="text-lg font-normal text-black">
               REVIEWS
-            </a>
             </Link>
             </li>
         </ul>
@@ -70,13 +60,13 @@ const Nav = () => {
             className="absolute top-0 right-0 mr-5 cusor-pointer text-xl text-green-500 hover:text-green-900" 
              onClick={toggleNavBar}
             />
-        <a href ="/">
-        </a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">HOME</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">PROFILE</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">CONTACT US</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">APPLY</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">REVIEWS</a>
+        <Link href ="/">
+        </Link>
+        <Link href ="/" className="flex justify-center mt-10 mb-5">HOME</Link>
+        <Link href ="/" className="flex justify-center mt-10 mb-5">PROFILE</Link>
+        <Link href ="/" className="flex justify-center mt-10 mb-5">CONTACT US</Link>
+        <Link href ="/" className="flex justify-center mt-10 mb-5">APPLY</Link>
+        <Link href ="/" className="flex justify-center mt-10 mb-5">REVIEWS</Link>
       </div>
         
           )

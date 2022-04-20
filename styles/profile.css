@@ -13,7 +13,7 @@
   width:150px;
   margin:2rem auto 0 auto;
   border-radius:50%;
-  border:0px solid red;
+  border:0px solid rgb(5, 66, 5);
 }
 .profile-body{
     max-width:1200px;
