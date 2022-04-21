@@ -11,4 +11,18 @@
 .navbar-logo,.navbar-home{
 	color:#fff;
 }
+.nav-items-link{
+    border-bottom:1px solid #383838;
+    padding:1rem;
+    margin:0;
+}
+.nav-items-link:hover{
+    background:#333;
+    transition:background 0.6s ease;
+}
+.nav-items-link-times{
+    font-size:1.8rem;
+    font-weight:bold;
+    cursor:pointer;
+}
 
