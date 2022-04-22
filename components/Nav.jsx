@@ -13,70 +13,58 @@ const Nav = () => {
     <nav className="nav-header w-full bg-gray-400  h-20 flex items-center">
       <div className="w-96">
         <h1 className="text-center text-4xl font-bold">
-          <span className="project-green-text navbar-logo">HIRE</span> PURCHASE
+          <a className="project-green-text navbar-logo">HIRE</a> PURCHASE
         </h1>
       </div>
       <div className=" hidden md:flex flex-row flex w-3/4 justify-end items-center mr-20">
         <ul className="flex ">
           <li className="mx-4">
             <Link href="/">
-            <a className="text-lg font-normal project-green-text navbar-home">
-              HOME
-            </a>
+              <a className="text-lg font-normal project-green-text navbar-home">HOME</a>
             </Link>
           
           </li>
           <li className="mx-4">
-            <Link  href="/profile" >
-              <a className="text-lg font-normal text-black">
-                PROFILE
-              </a>
+            <Link href="/profile" >
+                <a className="text-lg font-normal text-black">PROFILE</a>
             </Link>
           </li>
           <li className="mx-4">
-            <Link href="#">
-            <a className="text-lg font-normal text-black">
-              CONTACT US
-            </a>
+            <Link href="#" >
+              <a className="text-lg font-normal text-black">CONTACT US</a>
             </Link>
           </li>
 
           <li className="mx-4">
             <Link href="/programmes">
-            <a className="text-lg font-normal text-black">
-              APPLY
-            </a>
+              <a className="text-lg font-normal text-black">APPLY</a>
             </Link>
           </li>
 
           <li className="mx-4">
-            <Link  href="#" >
-            <a className="text-lg font-normal text-black">
-              REVIEWS
-            </a>
+            <Link  href="#">
+              <a className="text-lg font-normal text-black">REVIEWS</a>
             </Link>
             </li>
         </ul>
         </div> 
         <HiMenu 
-            className="text-3xl md:hidden ml-5 hover:text-green-500"
+            className="text-5xl md:hidden ml-5 hover:text-white"
             onClick={toggleNavBar}
             /> 
     </nav>
     {
           mobileNav && (
-            <div className="flex flex-col h-screen w-(55%) fixed right-0 top-0 bottom-0 bg-black -50 text-green-500 pt-10 text-lg px-100">
-          <AiOutlineClose
-            className="absolute top-0 right-0 mr-5 cusor-pointer text-xl text-green-500 hover:text-green-900" 
+            <div className="toggle-nav-container flex flex-col h-screen w-[55%] fixed right-0 top-0 bottom-0 bg-black text-white text-2xl px-0 py-10 z-50 text-center ">
+         <AiOutlineClose
+            className="absolute top-0 right-0 mr-5 text-2xl text-white hover:text-yellow-200 font-medium nav-items-link-times" 
              onClick={toggleNavBar}
             />
-        <a href ="/">
-        </a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">HOME</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">PROFILE</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">CONTACT US</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">APPLY</a>
-        <a href ="/" className="flex justify-center mt-10 mb-5">REVIEWS</a>
+        <Link href ="/"><a className="nav-items-link flex justify-center">HOME</a></Link>
+        <Link href ="/profile"><a className="nav-items-link flex justify-center">PROFILE</a></Link>
+        <Link href ="#"><a className="nav-items-link flex justify-center">CONTACT US</a></Link>
+        <Link href ="/programmes"><a className="nav-items-link flex justify-center">APPLY</a></Link>
+        <Link href ="#" ><a className="nav-items-link flex justify-center">REVIEWS</a></Link>
       </div>
         
           )
