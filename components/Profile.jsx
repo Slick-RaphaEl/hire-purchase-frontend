@@ -10,8 +10,8 @@ function Profile(props) {
      <h2>{props.heading}</h2>
      </div>
     </section> 
-       <section className='profile-body'>
-       <dl>
+       <section className='profile-body grid place-items-center md:place-items-stretch'>
+       <dl className='md:flex md:justify-between'>
          <div className="col-1">
          <dt>Phone:</dt>
          <dd>{props.phone}</dd>
@@ -23,7 +23,7 @@ function Profile(props) {
          <dd>{props.state}</dd>
          </div>
         <div className="col-2">
-        <dt>Program:</dt>
+         <dt>Program:</dt>
          <dd>{props.program}</dd>
          <dt>Time on Hire Purchase:</dt>
          <dd>{props.timeOnHirePurchase}</dd>
@@ -32,8 +32,7 @@ function Profile(props) {
          <dt className='font-medium'>Time left for payment:</dt>
          <dd>{props.timeLeftForPayment}</dd>
         </div>
-         
-       </dl>
+         </dl>
        </section>
     </>
   );

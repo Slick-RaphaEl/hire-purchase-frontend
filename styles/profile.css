@@ -20,13 +20,11 @@
     min-height:300px;
     margin:2rem auto;
     background:rgb(200, 206, 200);
+    /* display:flex;
+    justify-content:center; */
 }
 .profile-body dl{
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
     padding:2rem;
-    align-items:center;
 }
 .profile-body dl dt{
     font-size:1.2rem;

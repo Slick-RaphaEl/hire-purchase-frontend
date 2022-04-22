@@ -4,13 +4,13 @@ const Application = () => {
     <>
       <div className="w-full h-full flex justify-center m-0 ">
         <div>
-          <FiUser className="h-36 w-36 mt-24 bg-gray-400 rounded-full" />
+          <FiUser className="h-36 w-36 mt-24 bg-gray-400 rounded-full mx-auto" />
         </div>
       </div>
-      <div className="h-96 w-3/4 flex flex-row justify-center m-0 mx-64 px-32 mt-16">
-        <div className="basis-1/2 w-full">
-          <form>
-            <div className="form-group mb-3">
+      <div className=" form-container h-full w-full flex flex-col items-center justify-center ml-10 mx-auto md:mx-auto px-20 mt-10 md:flex-row md:w-3/4">
+        <div className="md:basis-1/2 w-full">
+          <form className="flex flex-col">
+            <div className="basis-1/2 form-group mb-6">
               <label
                 htmlFor="name"
                 className="form-label inline-block mb-2 text-gray-700"
@@ -37,7 +37,7 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                htmlFor="name"
+                htmlFor="phone"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
@@ -55,7 +55,7 @@ const Application = () => {
                       m-0
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                id="name"
+                id="phone"
                 aria-describedby="emailHelp"
                 placeholder="Phone Number"
               ></input>
@@ -80,7 +80,7 @@ const Application = () => {
                       m-0
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                id="name"
+                id="email"
                 aria-describedby="emailHelp"
                 placeholder="Your e-mail"
               ></input>
@@ -105,7 +105,7 @@ const Application = () => {
                       m-0
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                id="name"
+                id="password"
                 aria-describedby="emailHelp"
                 placeholder="Input password"
               ></input>
@@ -139,9 +139,9 @@ const Application = () => {
             </div>
           </form>
         </div>
-        <div className="basis-1/2 w-full">
+        <div className="md:basis-1/2 w-full">
           <form>
-            <div className="form-group mb-3">
+            <div className="form-group mb-6">
               <label
                 htmlFor="address"
                 className="form-label inline-block mb-2 text-gray-700"
@@ -285,9 +285,9 @@ const Application = () => {
           type="submit"
           id="btn"
           className="
-                        w-72
+                      w-72
                       h-12
-                       mt-20
+                      mt-5
                       py-2.5
                       bg-blue-400
                       text-white
@@ -302,7 +302,7 @@ const Application = () => {
                       active:bg-blue-800 active:shadow-lg
                     "
         >
-          Sign in
+          Apply
         </button>
       </div>
     </>

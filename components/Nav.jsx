@@ -12,38 +12,38 @@ const Nav = () => {
     <div>
     <nav className="nav-header w-full bg-gray-400  h-20 flex items-center">
       <div className="w-96">
-        <h1 className="text-center text-4xl font-bold">
+        <h1 className="text-center text-4xl md:text-3xl md:text-left font-bold">
           <a className="project-green-text navbar-logo">HIRE</a> PURCHASE
         </h1>
       </div>
-      <div className=" hidden md:flex flex-row flex w-3/4 justify-end items-center mr-20">
+      <div className=" hidden md:flex  flex-row flex w-3/4 justify-end items-center mr-20 ">
         <ul className="flex ">
-          <li className="mx-4">
+          <li className="mx-2">
             <Link href="/">
-              <a className="text-lg font-normal project-green-text navbar-home">HOME</a>
+              <a className="text-lg md:text-base font-normal project-green-text navbar-home">HOME</a>
             </Link>
           
           </li>
-          <li className="mx-4">
+          <li className="mx-2">
             <Link href="/profile" >
-                <a className="text-lg font-normal text-black">PROFILE</a>
+                <a className="text-lg md:text-base  font-normal text-black">PROFILE</a>
             </Link>
           </li>
-          <li className="mx-4">
+          <li className="mx-2">
             <Link href="#" >
-              <a className="text-lg font-normal text-black">CONTACT US</a>
+              <a className="text-lg md:text-base  font-normal text-black">CONTACT US</a>
             </Link>
           </li>
 
-          <li className="mx-4">
+          <li className="mx-2">
             <Link href="/programmes">
-              <a className="text-lg font-normal text-black">APPLY</a>
+              <a className="text-lg md:text-base  font-normal text-black">APPLY</a>
             </Link>
           </li>
 
-          <li className="mx-4">
+          <li className="mx-2">
             <Link  href="#">
-              <a className="text-lg font-normal text-black">REVIEWS</a>
+              <a className="text-lg md:text-base font-normal text-black">REVIEWS</a>
             </Link>
             </li>
         </ul>

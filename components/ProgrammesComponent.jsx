@@ -7,7 +7,7 @@ export default function ProgrammesComoponent({image,heading,paragraph}){
     const  router = useRouter();
 
 	return(
-	<div className="w-[90%] md:w-[80%] mx-auto flex flex-col-reverse md:flex-row my-10 programme-container">
+	<div className="w-[90%] md:w-[80%] mx-auto flex flex-col md:flex-row my-10 programme-container">
 	 <div className="w-[80%] md:w-[50%] mx-auto my-auto">
       <Image src={image} alt="Our Programmes" width={700} height={500} className="rounded-md"/>
 	 </div>
