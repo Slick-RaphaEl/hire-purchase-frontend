@@ -2,8 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import ButtonFill from './ButtonFill';
 import {useRouter} from  'next/router';
+import Link from "next/link";
 
-export default function ProgrammesComoponent({image,heading,paragraph}){
+export default function ProgrammesComoponent({image,heading,paragraph,href}){
     const  router = useRouter();
 
 	return(
@@ -18,7 +19,9 @@ export default function ProgrammesComoponent({image,heading,paragraph}){
       <p className="text-base text-grey-800">
       {paragraph}
       </p>
-      <ButtonFill action ="read more" onClick={ e => router.push('/application')}/>
+
+     
+      <ButtonFill action ="read more" onClick={ e => router.push(href)}/>
 	 </div>
 	</div>
 	)
