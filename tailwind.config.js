@@ -1,10 +1,11 @@
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {'green-rgba': 'rgba(22,255,2,0.8)'},
+    },
   },
   plugins: [],
-};
+}
