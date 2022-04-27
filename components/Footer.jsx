@@ -14,11 +14,11 @@ function Footer() {
 
 <div className='grid grid-cols-2 gap-y-3 gap-10 pb-5 '>
 
-      <a className='flex cursor-pointer text-black-800 gap-1'><FaInstagram size={30} className=' text-2*1 '></FaInstagram> Instagram</a>
-      <a className='flex cursor-pointer text-black-800 gap-1'><FaWhatsapp size={30} className=' text-2*1'></FaWhatsapp> Whatsapp</a>
-      <a className='flex cursor-pointer text-black-800 gap-1'><FaFacebook size={30} className=' text-2*1'></FaFacebook> Facebook</a>
-      <a className='flex cursor-pointer text-black-800 gap-1'><FaPhoneSquare size={30} className=' text-2*1'></FaPhoneSquare> tele-phone</a>
-      <a className='flex cursor-pointer text-black-800 gap-1'><AiOutlineMail  size={30} className=' text-2*1'></AiOutlineMail>Mail</a>
+      <a  href={'https://www.instagram.com/bayernmunchen.mydna/?hl=en'} className='flex cursor-pointer text-black-800 gap-1'><FaInstagram size={30} className=' text-2*1 '></FaInstagram> Instagram</a>
+      <a  href="https://wa.me/<+09074512431>" className='flex cursor-pointer text-black-800 gap-1'><FaWhatsapp size={30} className=' text-2*1'></FaWhatsapp> Whatsapp</a>
+      <a  href={'https://www.facebook.com/Findy-Global-110189124886586/'} className='flex cursor-pointer text-black-800 gap-1'><FaFacebook size={30} className=' text-2*1'></FaFacebook> Facebook</a>
+      <a  href="tel:+09074512431" className='flex cursor-pointer text-black-800 gap-1'><FaPhoneSquare size={30} className=' text-2*1'></FaPhoneSquare> tele-phone</a>
+      <a href={"mailto:isaacchidera256@gmail.com"} className='flex cursor-pointer text-black-800 gap-1'><AiOutlineMail  size={30} className=' text-2*1'></AiOutlineMail>Mail</a>
     </div>
     
     </div>

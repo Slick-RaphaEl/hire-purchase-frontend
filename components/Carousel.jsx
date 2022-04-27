@@ -20,9 +20,9 @@ const ImageCarousel = () => {
           renderIndicator={renderIndicator}
           showStatus={false}
           showArrows={false}
-          // interval={5000}
+          interval={5000}
           onChange={onSlideChange}
-          centerMode
+          // centerMode
           infiniteLoop
           autoPlay
         >
