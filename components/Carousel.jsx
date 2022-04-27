@@ -15,18 +15,23 @@ const ImageCarousel = () => {
     <div className="carousel">
       <SelectedSlideContext.Provider value={selectedIndex}>
         <Carousel
+         
           showThumbs={false}
           renderIndicator={renderIndicator}
           showStatus={false}
           showArrows={false}
+          // interval={5000}
           onChange={onSlideChange}
           centerMode
           infiniteLoop
           autoPlay
         >
+  
+
           <Slide imageId="tailor.jpg" index={0}></Slide>
           <Slide imageId="taxi.jpg" index={1}></Slide>
           <Slide imageId="keke.jpg" index={2}></Slide>
+       
         </Carousel>
         <h2>Giving you the opportunity you wish you had</h2>
       </SelectedSlideContext.Provider>

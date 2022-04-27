@@ -9,11 +9,11 @@ function Keke_drip() {
   return (
     <MainLayout><div className='Major_container'>
         <div className='container'>
-        <Image  src={keke} alt="Our keke Programme"/>
+        <Image src={keke} alt="Our keke Programme"/>
       rock that keke now
       </div>
 
-            <Link href={'/profile'}>
+            <Link href={'/profile'} >
             <ButtonFill action ="submit" onClick={()=>{}}/>
             </Link>
 
