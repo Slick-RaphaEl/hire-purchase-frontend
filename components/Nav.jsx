@@ -36,7 +36,7 @@ const Nav = () => {
           </li>
 
           <li className="mx-2">
-            <Link href="/programmes">
+            <Link href="/programs">
               <a className="text-lg md:text-base  font-normal text-black">APPLY</a>
             </Link>
           </li>
@@ -63,11 +63,10 @@ const Nav = () => {
         <Link href ="/"><a className="nav-items-link flex justify-center">HOME</a></Link>
         <Link href ="/profile"><a className="nav-items-link flex justify-center">PROFILE</a></Link>
         <Link href ="#"><a className="nav-items-link flex justify-center">CONTACT US</a></Link>
-        <Link href ="/programmes"><a className="nav-items-link flex justify-center">APPLY</a></Link>
+        <Link href ="/programs"><a className="nav-items-link flex justify-center">APPLY</a></Link>
         <Link href ="#" ><a className="nav-items-link flex justify-center">REVIEWS</a></Link>
       </div>
-        
-          )
+        )
         }   
     </div>
   );
