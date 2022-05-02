@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import Profile from "../components/Profile";
-import girl from '../img/bus-1.jpeg';
+// import girl from '../img/bus-1.jpeg';
 
 const ProfilePage = () => {
 
@@ -11,7 +11,6 @@ const ProfilePage = () => {
   return (
     <MainLayout>
       <Profile 
-       image = {girl}
        heading="Ikpa Esther Uchechukwu"
        phone={phone}
        email="Boy@gmail/com"

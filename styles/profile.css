@@ -13,20 +13,18 @@
   width:150px;
   margin:2rem auto 0 auto;
   border-radius:50%;
-  border:0px solid red;
+  border:0px solid rgb(5, 66, 5);
 }
 .profile-body{
     max-width:1200px;
     min-height:300px;
     margin:2rem auto;
     background:rgb(200, 206, 200);
+    /* display:flex;
+    justify-content:center; */
 }
 .profile-body dl{
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
     padding:2rem;
-    align-items:center;
 }
 .profile-body dl dt{
     font-size:1.2rem;
