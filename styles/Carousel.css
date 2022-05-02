@@ -13,7 +13,7 @@
 
 .carousel > h2 {
   color: #fff;
-  font-weight:bold;
+  font-weight:normal;
   font-size: 48px;
   font-style: italic;
   line-height: 72px;
@@ -23,12 +23,15 @@
   position: absolute;
   top:0;
   left:0;
-  font-family:"Indie Flower",sans-serif;
+  font-family:cursive,sans-serif, "Roboto";
  /* -webkit-text-stroke:3px #fff;*/
  text-align: center;
  padding:15rem 0 0 0;
   opacity:0.7;
   background:#000000;
+}
+.carousel > h2:after{
+  content:"...";
 }
 
 .img-slide {

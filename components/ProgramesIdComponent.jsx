@@ -18,7 +18,7 @@ export default function ProgrammesComoponent(props){
       <p className="text-base text-grey-800">
       {props.paragraph}
       </p>
-      <ButtonFill action ="read more" onClick={ (e) => router.push('/programs/[id]',`/programs/${props.id}`)}/>
+      <ButtonFill action ="Click to Apply" onClick={ (e) => router.push('/application')}/>
 	 </div>
 	</div>
 	)
