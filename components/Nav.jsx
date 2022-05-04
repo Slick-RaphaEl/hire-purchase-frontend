@@ -87,7 +87,7 @@ const Nav = () => {
         {/*initializing signin session middleware for mobile view */}
         {
           session ? (
-            <div className="flex flex-col">
+            <div>
             <Link href ="/profile">
               <a className="nav-items-link flex justify-center">
                 PROFILE
