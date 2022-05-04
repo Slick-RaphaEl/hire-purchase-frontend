@@ -3,12 +3,15 @@ import '../styles/Carousel.css';
 import '../styles/programmes.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ITEMS } from '../shared/ProgrammesItems';
+import { SessionProvider } from "next-auth/react";
 require('../styles/profile.css');
 
 
 function MyApp({ Component, pageProps }) {
-  return(
-    <Component {...pageProps} items={ITEMS} />
+  return (
+    <SessionProvider session={pageProps.session}>
+      <Component {...pageProps} items={ITEMS} />
+    </SessionProvider>
   );
    
 }

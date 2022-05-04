@@ -23,6 +23,7 @@ const ImageCarousel = () => {
           centerMode
           infiniteLoop
           autoPlay
+          centerSlidePercentage={60}
         >
           <Slide imageId="tailor.jpg" index={0}></Slide>
           <Slide imageId="taxi.jpg" index={1}></Slide>

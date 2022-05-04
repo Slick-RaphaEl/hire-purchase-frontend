@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import MainLayout from "../components/layouts/MainLayout";
 import Profile from "../components/Profile";
 // import girl from '../img/bus-1.jpeg';
@@ -21,6 +22,7 @@ const ProfilePage = () => {
        amounToBePaidThisMonth={amount}
        timeLeftForPayment = "15 days"
       />
+      <Footer />
     </MainLayout>
     );
 };
