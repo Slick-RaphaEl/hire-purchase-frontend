@@ -16,7 +16,7 @@ const Nav = () => {
     <div>
     <nav className="nav-header w-full bg-gray-400  h-20 flex items-center">
       <div className="w-96">
-        <h1 className="text-center text-4xl md:text-3xl md:text-left font-bold">
+        <h1 className="text-center text-4xl md:text-3xl md:text-left font-bold pl-4">
           <a className="project-green-text navbar-logo">HIRE</a> PURCHASE
         </h1>
       </div>
