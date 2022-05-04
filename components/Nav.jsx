@@ -2,12 +2,16 @@ import Link from "next/link";
 import{HiMenu} from "react-icons/hi";
 import {AiOutlineClose} from 'react-icons/ai';
 import {useState} from 'react';
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const toggleNavBar = () => {
     setMobileNav(!mobileNav);
   }
+
+  const { data: session } = useSession()
+
   return (
     <div>
     <nav className="nav-header w-full bg-gray-400  h-20 flex items-center">
@@ -22,13 +26,32 @@ const Nav = () => {
             <Link href="/">
               <a className="text-lg md:text-base font-normal project-green-text navbar-home">HOME</a>
             </Link>
-          
           </li>
-          <li className="mx-2">
+          {/*initializing signin session middleware */}
+          {
+           session ? (
+             <div className="flex flex-row">
+            <li className="mx-2">
             <Link href="/profile" >
                 <a className="text-lg md:text-base  font-normal text-black">PROFILE</a>
             </Link>
           </li>
+           <li className="mx-2">
+           <a className="text-lg md:text-base font-normal text-black cursor-pointer"
+           onClick={()=>signOut()}
+           >SIGN OUT</a>
+           </li>
+           </div>
+           ):
+           (
+            <li className="mx-2">
+                <a className="text-lg md:text-base font-normal text-black cursor-pointer"
+                onClick={()=>signIn()}
+                >SIGN IN</a>
+          </li>
+           )
+          }
+          
           <li className="mx-2">
             <Link href="#" >
               <a className="text-lg md:text-base  font-normal text-black">CONTACT US</a>
