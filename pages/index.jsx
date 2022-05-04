@@ -14,10 +14,10 @@ export default function Home() {
       <Carousel />
       <div className="">
             <div className="pt-10">
-                <h2 className="text-center text-3xl font-semibold text-green-500">Don't have enough capital for your business?</h2>
+                <h2 className="text-center text-3xl font-semibold text-green-500">Don&apos;t have enough capital for your business?</h2>
             </div>
             <div className="">
-                <p className="text-center text-2xl mt-8">Don't worry<br></br>Hire purchase got you! Start a business with as low as<br></br>Zero capital. Amazing right?<br></br>Apply for the listed job offers below and let's earn!!!</p>
+                <p className="text-center text-2xl mt-8">Don&apos;t worry<br></br>Hire purchase got you! Start a business with as low as<br></br>Zero capital. Amazing right?<br></br>Apply for the listed job offers below and let's earn!!!</p>
             </div>
             <div className="flex justify-center mt-10 w-[60%] mx-auto">
               <Image src={youth} alt="image" className="rounded-md" />
