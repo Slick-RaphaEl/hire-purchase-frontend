@@ -65,7 +65,7 @@ const Nav = () => {
           </li>
 
           <li className="mx-2">
-            <Link  href="#">
+            <Link  href="/sigIn">
               <a className="text-lg md:text-base font-normal text-black">REVIEWS</a>
             </Link>
             </li>
@@ -111,7 +111,7 @@ const Nav = () => {
         
         <Link href ="#"><a className="nav-items-link flex justify-center">CONTACT US</a></Link>
         <Link href ="/programs"><a className="nav-items-link flex justify-center">APPLY</a></Link>
-        <Link href ="#" ><a className="nav-items-link flex justify-center">REVIEWS</a></Link>
+        <Link href ="/sigIn" ><a className="nav-items-link flex justify-center">REVIEWS</a></Link>
       </div>
         )
         }   

@@ -23,12 +23,12 @@
   position: absolute;
   top:0;
   left:0;
-  font-family:Cursive,sans-serif, "Roboto";
+  font-family:Cursive,sans-serif," Roboto ";
  /* -webkit-text-stroke:3px #fff;*/
  text-align: center;
  padding:15rem 0 0 0;
-  opacity:0.7;
-  background:#000000;
+  opacity:0.9;
+  background:rgba(0,0,0,0.5);
 }
 .carousel > h2:after{
   content:"...";
