@@ -10,7 +10,7 @@ const Nav = () => {
     setMobileNav(!mobileNav);
   }
 
-  const { data: session } = useSession()
+  const { data: session } = useSession();
 
   return (
     <div>
@@ -84,7 +84,31 @@ const Nav = () => {
              onClick={toggleNavBar}
             />
         <Link href ="/"><a className="nav-items-link flex justify-center">HOME</a></Link>
-        <Link href ="/profile"><a className="nav-items-link flex justify-center">PROFILE</a></Link>
+        {/*initializing signin session middleware for mobile view */}
+        {
+          session ? (
+            <div>
+            <Link href ="/profile">
+              <a className="nav-items-link flex justify-center">
+                PROFILE
+            </a></Link>
+             <a 
+             className="nav-items-link flex justify-center cursor-pointer"
+             onClick={()=>signOut()}>
+               SIGN OUT
+             </a>
+             </div>
+          ):
+          (
+              <a 
+              className="nav-items-link flex justify-center cursor-pointer"
+              onClick={()=>signIn()}>
+                SIGN IN
+              </a>
+          )
+        }
+
+        
         <Link href ="#"><a className="nav-items-link flex justify-center">CONTACT US</a></Link>
         <Link href ="/programs"><a className="nav-items-link flex justify-center">APPLY</a></Link>
         <Link href ="#" ><a className="nav-items-link flex justify-center">REVIEWS</a></Link>

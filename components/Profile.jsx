@@ -28,7 +28,7 @@ function Profile(props) {
          <dt>Time on Hire Purchase:</dt>
          <dd>{props.timeOnHirePurchase}</dd>
          <dt>Amount to be paid this month:</dt>
-         <dd>{props.amountToBePaidThisMonth}</dd>
+         <dd>₦{props.amountToBePaidThisMonth}</dd>
          <dt className='font-medium'>Time left for payment:</dt>
          <dd>{props.timeLeftForPayment}</dd>
         </div>

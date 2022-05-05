@@ -7,7 +7,7 @@ const Application = () => {
           <FiUser className="h-36 w-36 mt-24 bg-gray-400 rounded-full mx-auto" />
         </div>
       </div>
-      <div className=" form-container h-full w-full flex flex-col items-center justify-center ml-10 mx-auto md:mx-auto px-20 mt-10 md:flex-row md:w-3/4">
+      <div className=" form-container h-full flex flex-col items-center justify-center ml-10 mx-auto md:mx-auto px-20 mt-10 md:flex-row md:w-3/4">
         <div className="md:basis-1/2 w-full">
           <form className="flex flex-col">
             <div className="basis-1/2 form-group mb-6">
