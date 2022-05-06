@@ -3,8 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
+import { getCsrfToken, getProviders, getSession, signIn } from 'next-auth/react';
 
 function SignIn(props) {
+
+    console.log("provider = ", props);
     return (
         <div className='sign-in-section w-[90%] md:w-[98%] mx-auto flex flex-col md:flex-row justify-between'>
             {/* <span className='border-2 border-red-600'>baba</span> */}
@@ -17,7 +20,9 @@ function SignIn(props) {
                 <div className="btn-wrapper flex flex-col gap-6 pt-5 items-center">
                  
                 {/* facebook sign in button */}
-                <button className="btn-2 border-2 border-grey-200 text-white rounded-lg bg-white">
+                <button 
+                    onClick={() => signIn()}
+                    className="btn-2 border-2 border-grey-200 text-white rounded-lg bg-white">
                 <a  className="flex items-center gap-2 block" href="http://www.facebook.com/" target="_blank">
                 <FaFacebook className="block md:text-sm h-6 w-8 text-blue-700"/>
                 <span className='bg-blue-700 block text-xs md:text-sm p-2'>Sign in with Facebook
@@ -40,3 +45,20 @@ function SignIn(props) {
 }
 
 export default SignIn;
+
+export async function getServerSideProps(ctx) {
+    const {req} = ctx;
+    const session = await getSession({req});
+    if(session) {
+        return {
+            redirect: { destination: "/"},
+        };
+    }
+
+    return {
+        props: {
+            providers: await getProviders(),
+            csrfToken: await getCsrfToken(ctx),
+        }
+    }
+}

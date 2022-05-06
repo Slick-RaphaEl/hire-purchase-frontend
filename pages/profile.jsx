@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import Profile from "../components/Profile";
-import { getSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 // import girl from '../img/bus-1.jpeg';
 
 const ProfilePage = ({data}) => {
+  const { data: session } = useSession();
+  const router = useRouter();
+  const authUser = (sessionData) => {
+    if(!session) router.push('/signIn');
+  }
+  useEffect(() => {
+    authUser(session);
+  })
 
   return (
     <MainLayout>
