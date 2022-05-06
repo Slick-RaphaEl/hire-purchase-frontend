@@ -1,5 +1,36 @@
 import { FiUser } from "react-icons/fi";
 const Application = () => {
+ 
+  const[userDetails,setUserDetails] = useState({
+    name:"",
+    phone:"",
+    email:"",
+    password:"",
+    address:""
+  });
+  
+  const onChangedUserDetail = event => {
+    setUserDetails({
+      ...userDetails,
+      [event.target.name]:event.target.value
+    });
+  }
+  
+  const handleSubmit = event => {
+    event.preventDefault();
+    const profileData = {
+    name:userDetails.name,
+    phone:userDetails.phone,
+    email:userDetails.email,
+    password:userDetails.password,
+    address:userDetails.address,
+    id:Math.random().toString()
+    }
+    
+    props.onAddUserProfile(profileData);
+    setUserDetails({});
+  }
+
   return (
     <>
       <div className="w-full h-full flex justify-center m-0 ">
@@ -7,7 +38,7 @@ const Application = () => {
           <FiUser className="h-36 w-36 mt-24 bg-gray-400 rounded-full mx-auto" />
         </div>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
       <div className=" form-container h-full flex flex-col items-center justify-center ml-10 mx-auto md:mx-auto px-20 mt-10 md:flex-row md:w-3/4">
         <div className="md:basis-1/2 w-full">
           <div className="flex flex-col">
@@ -32,6 +63,9 @@ const Application = () => {
                       bg-gray-200
                       focus:text-gray-700 focus:bg-gray-500 focus:border-blue-600 focus:outline-none"
                 id="name"
+                name="name"
+                value={userDetails.name}
+                onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
                 placeholder="Your Name"
               />
@@ -57,6 +91,9 @@ const Application = () => {
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="phone"
+                name="phone"
+                value={userDetails.phone}
+                onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
                 placeholder="Phone Number"
               ></input>
@@ -82,6 +119,9 @@ const Application = () => {
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="email"
+                name="email"
+                value={userDetails.email}
+                onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
                 placeholder="Your e-mail"
               ></input>
@@ -107,6 +147,9 @@ const Application = () => {
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="password"
+                name="password"
+                value={userDetails.password}
+                onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
                 placeholder="Input password"
               ></input>
