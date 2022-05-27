@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
-import { getCsrfToken, getProviders, getSession, signIn } from 'next-auth/react';
+// import { getCsrfToken, getProviders, getSession, signIn } from 'next-auth/react';
 
 function SignIn(props) {
 
@@ -23,14 +23,14 @@ function SignIn(props) {
                 <button 
                     onClick={() => signIn()}
                     className="btn-2 border-2 border-grey-200 text-white rounded-lg bg-white">
-                <a  className="flex items-center gap-2 block" href="http://www.facebook.com/" target="_blank">
+                <a className="flex items-center gap-2 block" href="http://www.facebook.com/" target="_blank">
                 <FaFacebook className="block md:text-sm h-6 w-8 text-blue-700"/>
                 <span className='bg-blue-700 block text-xs md:text-sm p-2'>Sign in with Facebook
                 </span></a>
                 </button>
                 {/* Google sign in button */}
                 <button className="btn-2 border-2 border-grey-200 text-white rounded-lg bg-white">
-                <a  className="button-link flex items-center gap-2 block" href="http://www.facebook.com/" target="_blank">
+                <a className="button-link flex items-center gap-2 block" href="http://www.facebook.com/" target="_blank">
                 <FcGoogle className="block md:text-sm h-6 w-8 text-blue-700"/>
                 <span className='bg-red-600 block text-xs md:text-sm p-2'>Continue with google
                 </span></a>
@@ -46,19 +46,19 @@ function SignIn(props) {
 
 export default SignIn;
 
-export async function getServerSideProps(ctx) {
-    const {req} = ctx;
-    const session = await getSession({req});
-    if(session) {
-        return {
-            redirect: { destination: "/"},
-        };
-    }
+// export async function getServerSideProps(ctx) {
+//     const {req} = ctx;
+//     const session = await getSession({req});
+//     if(session) {
+//         return {
+//             redirect: { destination: "/"},
+//         };
+//     }
 
-    return {
-        props: {
-            providers: await getProviders(),
-            csrfToken: await getCsrfToken(ctx),
-        }
-    }
-}
+//     return {
+//         props: {
+//             providers: await getProviders(),
+//             csrfToken: await getCsrfToken(ctx),
+//         }
+//     }
+// }

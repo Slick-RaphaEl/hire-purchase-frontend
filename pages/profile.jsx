@@ -18,7 +18,7 @@ const ProfilePage = ({data}) => {
   return (
     <MainLayout>
       <Profile 
-      heading= {data.name}
+      heading= {data.name} 
        phone={data.phone}
        email={data.email}
        address={data.address}

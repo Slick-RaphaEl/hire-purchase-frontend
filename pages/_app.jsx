@@ -11,7 +11,7 @@ require('../styles/profile.css');
 function MyApp({ Component, pageProps }) {
   return (
     <SessionProvider session={pageProps.session}>
-      <Component {...pageProps} items={ITEMS} />
+      <Component {...pageProps} items={ITEMS}/>
     </SessionProvider>
   );
    

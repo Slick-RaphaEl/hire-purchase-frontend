@@ -14,7 +14,4 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_SECRET
     }),
   ],
-  // pages: {
-  //   signIn: '/signIn',
-  // }
 });

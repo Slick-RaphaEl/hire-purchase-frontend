@@ -1,3 +1,4 @@
+import React,{useState, useEffect} from 'react'
 import { FiUser } from "react-icons/fi";
 const Application = () => {
  
@@ -8,7 +9,7 @@ const Application = () => {
     password:"",
     address:""
   });
-  
+
   const onChangedUserDetail = event => {
     setUserDetails({
       ...userDetails,
@@ -19,15 +20,14 @@ const Application = () => {
   const handleSubmit = event => {
     event.preventDefault();
     const profileData = {
-    name:userDetails.name,
-    phone:userDetails.phone,
-    email:userDetails.email,
-    password:userDetails.password,
-    address:userDetails.address,
-    id:Math.random().toString()
-    }
-    
-    props.onAddUserProfile(profileData);
+      name:userDetails.name,
+      phone:userDetails.phone,
+      email:userDetails.email,
+      password:userDetails.password,
+      address:userDetails.address,
+      id:Math.random().toString()
+      }
+    console.log(profileData);
     setUserDetails({});
   }
 
@@ -175,7 +175,7 @@ const Application = () => {
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
               >
-                <option selected>Gender</option>
+                <option >Gender</option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
                 <option value="3">Rather not say</option>
@@ -204,7 +204,10 @@ const Application = () => {
                       m-0
                       bg-gray-200
                       focus:text-gray-700 focus:bg-gray-500 focus:border-blue-600 focus:outline-none"
-                id="name"
+                id="address"
+                name="address"
+                value={userDetails.address}
+                onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
                 placeholder="Your address"
               ></input>
@@ -230,7 +233,8 @@ const Application = () => {
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
               >
-                <option selected>Your city</option>
+                <option/>
+                <option>Your city</option>
                 <option value="1">Aba</option>
                 <option value="2">Awka</option>
                 <option value="3">Enugu</option>
@@ -259,8 +263,9 @@ const Application = () => {
                       bg-gray-200
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
+                onChange = {onChangedUserDetail}
               >
-                <option selected>Your state</option>
+                <option>Your state</option>
                 <option value="1">Abia</option>
                 <option value="2">Adamawa</option>
                 <option value="3">Akwa Ibom</option>
@@ -289,8 +294,9 @@ const Application = () => {
                       bg-gray-200
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
+                onChange = {onChangedUserDetail}
               >
-                <option selected>Your age</option>
+                <option>Your age</option>
                 <option value="1">18-25</option>
                 <option value="2">26-40</option>
                 <option value="3">41-70</option>
@@ -317,6 +323,9 @@ const Application = () => {
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 id="number"
+                name="NIN"
+                value={userDetails.NIN}
+                onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
                 placeholder="Your NIN number"
               ></input>
