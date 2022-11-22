@@ -35,4 +35,7 @@
 .form-container label:after{
     content:":";
 }
+.nin-input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    }
 

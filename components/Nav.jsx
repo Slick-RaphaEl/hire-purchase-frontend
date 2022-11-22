@@ -3,6 +3,7 @@ import{HiMenu} from "react-icons/hi";
 import {AiOutlineClose} from 'react-icons/ai';
 import {useState} from 'react';
 import { useSession, signIn, signOut } from "next-auth/react";
+import {useRouter} from  'next/router';
 
 const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
@@ -11,6 +12,7 @@ const Nav = () => {
   }
 
   const { data: session } = useSession();
+  const  router = useRouter();
 
   return (
     <div>
@@ -30,7 +32,7 @@ const Nav = () => {
           {/*initializing signin session middleware */}
           {
            session ? (
-             <div className="flex flex-row">
+            <div className="flex flex-row">
             <li className="mx-2">
             <Link href="/profile" >
                 <a className="text-lg md:text-base  font-normal text-black">PROFILE</a>
@@ -46,6 +48,7 @@ const Nav = () => {
            (
             <li className="mx-2">
                 <a className="text-lg md:text-base font-normal text-black cursor-pointer"
+                onClick={ (e) => router.push('/signIn')}
                 onClick={()=>signIn()}
                 >SIGN IN</a>
           </li>

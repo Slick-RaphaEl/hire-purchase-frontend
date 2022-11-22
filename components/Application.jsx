@@ -1,13 +1,19 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect} from 'react';
 import { FiUser } from "react-icons/fi";
 const Application = () => {
- 
+  
+  const[message,setMessage] = useState("");
   const[userDetails,setUserDetails] = useState({
-    name:"",
+    fullname:"",
     phone:"",
     email:"",
-    password:"",
-    address:""
+    confirmEmail:"",
+    address:"",
+    city:"",
+    state:"",
+    age:"",
+    NIN:"",
+    gender:""
   });
 
   const onChangedUserDetail = event => {
@@ -16,20 +22,43 @@ const Application = () => {
       [event.target.name]:event.target.value
     });
   }
+
+
   
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const profileData = {
-      name:userDetails.name,
-      phone:userDetails.phone,
-      email:userDetails.email,
-      password:userDetails.password,
-      address:userDetails.address,
-      id:Math.random().toString()
-      }
-    console.log(profileData);
-    setUserDetails({});
+    fullname:userDetails.fullname,
+    email:userDetails.email,
+    confirmEmail:userDetails.confirmEmail,
+    address:userDetails.address,
+    age:userDetails.age,
+    stateOfOrigin:userDetails.state,
+    phoneNumber:userDetails.phone,
+    city:userDetails.city,
+    NIN:userDetails.NIN,
+    gender:userDetails.gender
+    // id:Math.random().toString(),
+     
+    }
+    //console.log(profileData);
+     fetch("http://hire-purchase-backend.herokuapp.com/create-existing-proposal",{
+      method:'POST',
+      headers:{
+      'Content-Type':'application/json',
+      'Access-Control-Allow-Origin':'*'
+      },
+      body:JSON.stringify(profileData)
+     })
+     .then(()=>{
+      console.log("sent to database")
+     })
+     .catch(err=>{
+      console.log("not sent",err)
+     })
   }
+  
+
 
   return (
     <>
@@ -63,7 +92,7 @@ const Application = () => {
                       bg-gray-200
                       focus:text-gray-700 focus:bg-gray-500 focus:border-blue-600 focus:outline-none"
                 id="name"
-                name="name"
+                name="fullname"
                 value={userDetails.name}
                 onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
@@ -128,14 +157,14 @@ const Application = () => {
             </div>
             <div className="form-group mb-3">
               <label
-                htmlFor="password"
+                htmlFor="confirmEmail"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 {" "}
-                Password
+                Confirm E-mail
               </label>
               <input
-                type="password"
+                type="email"
                 className="form-control
                       block
                       w-3/4
@@ -146,9 +175,9 @@ const Application = () => {
                       m-0
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                id="password"
-                name="password"
-                value={userDetails.password}
+                id="confirmEmail"
+                name="confirmEmail"
+                value={userDetails.confirmEmail}
                 onChange = {onChangedUserDetail}
                 aria-describedby="emailHelp"
                 placeholder="Input password"
@@ -174,11 +203,15 @@ const Application = () => {
                       bg-gray-200
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
+                id="gender"
+                name="gender"
+                value={userDetails.gender}
+                onChange = {onChangedUserDetail}
               >
                 <option >Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Rather not say</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="rather not say">Rather not say</option>
               </select>
             </div>
           </div>
@@ -232,16 +265,20 @@ const Application = () => {
                       bg-gray-200
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
+                id="city"
+                name="city"
+                value={userDetails.city}
+                onChange = {onChangedUserDetail}
               >
                 <option/>
                 <option>Your city</option>
-                <option value="1">Aba</option>
-                <option value="2">Awka</option>
-                <option value="3">Enugu</option>
-                <option value="4">Ikeja</option>
-                <option value="5">Port-harcourt</option>
-                <option value="6">Uyo</option>
-                <option value="7">Yola</option>
+                <option value="aba">Aba</option>
+                <option value="awka">Awka</option>
+                <option value="enugu">Enugu</option>
+                <option value="ikeja">Ikeja</option>
+                <option value="port-harcourt">Port-harcourt</option>
+                <option value="uyo">Uyo</option>
+                <option value="yola">Yola</option>
               </select>
             </div>
             <div className="form-group mb-3">
@@ -263,16 +300,19 @@ const Application = () => {
                       bg-gray-200
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
+                id="state"
+                name="state"
+                value={userDetails.state}
                 onChange = {onChangedUserDetail}
               >
                 <option>Your state</option>
-                <option value="1">Abia</option>
-                <option value="2">Adamawa</option>
-                <option value="3">Akwa Ibom</option>
-                <option value="4">Anambra</option>
-                <option value="5">Enugu</option>
-                <option value="6">Lagos</option>
-                <option value="7">Rivers</option>
+                <option value="abia">Abia</option>
+                <option value="adamawa">Adamawa</option>
+                <option value="akwa ibom">Akwa Ibom</option>
+                <option value="anambra">Anambra</option>
+                <option value="enugu">Enugu</option>
+                <option value="lagos">Lagos</option>
+                <option value="rivers">Rivers</option>
               </select>
             </div>
             <div className="form-group mb-3">
@@ -294,25 +334,28 @@ const Application = () => {
                       bg-gray-200
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 aria-label="Default select example"
+                id="age"
+                name="age"
+                value={userDetails.age}
                 onChange = {onChangedUserDetail}
               >
                 <option>Your age</option>
-                <option value="1">18-25</option>
-                <option value="2">26-40</option>
-                <option value="3">41-70</option>
-                <option value="4">70+</option>
+                <option value="18-25">18-25</option>
+                <option value="26-40">26-40</option>
+                <option value="41-70">41-70</option>
+                <option value="70+">70+</option>
               </select>
             </div>
             <div className="form-group mb-3">
               <label
-                htmlFor="number"
+                htmlFor="NIN"
                 className="form-label inline-block mb-2 text-gray-700"
               >
                 NIN
               </label>
               <input
                 type="number"
-                className="form-control
+                className="form-control nin-input
                       block
                       w-3/4
                       h-11
@@ -322,7 +365,7 @@ const Application = () => {
                       m-0
                       bg-gray-200
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                id="number"
+                id="NIN"
                 name="NIN"
                 value={userDetails.NIN}
                 onChange = {onChangedUserDetail}

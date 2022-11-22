@@ -7,7 +7,6 @@ import { FaFacebook } from 'react-icons/fa';
 
 function SignIn(props) {
 
-    console.log("provider = ", props);
     return (
         <div className='sign-in-section w-[90%] md:w-[98%] mx-auto flex flex-col md:flex-row justify-between'>
             {/* <span className='border-2 border-red-600'>baba</span> */}
@@ -21,22 +20,25 @@ function SignIn(props) {
                  
                 {/* facebook sign in button */}
                 <button 
-                    onClick={() => signIn()}
-                    className="btn-2 border-2 border-grey-200 text-white rounded-lg bg-white">
-                <a className="flex items-center gap-2 block" href="http://www.facebook.com/" target="_blank">
+                className="btn-2 border-2 border-grey-200 text-white rounded-lg bg-white">
+                <Link href="#" target="_blank">
+                <a className="flex items-center gap-2 block">
                 <FaFacebook className="block md:text-sm h-6 w-8 text-blue-700"/>
                 <span className='bg-blue-700 block text-xs md:text-sm p-2'>Sign in with Facebook
-                </span></a>
+                </span></a></Link>
                 </button>
                 {/* Google sign in button */}
                 <button className="btn-2 border-2 border-grey-200 text-white rounded-lg bg-white">
-                <a className="button-link flex items-center gap-2 block" href="http://www.facebook.com/" target="_blank">
+                <Link href="http://hire-purchase-backend.herokuapp.com/google/" target="_blank">
+                <a className="button-link flex items-center gap-2 block">
                 <FcGoogle className="block md:text-sm h-6 w-8 text-blue-700"/>
                 <span className='bg-red-600 block text-xs md:text-sm p-2'>Continue with google
-                </span></a>
+                </span>
+                </a></Link>
                 </button>
                 <Link href='#'>
-                <p className="cursor-pointer text-blue-900">Don't have an account click here to login</p>
+                <a className="cursor-pointer text-blue-900">Do not have an account click here to login
+                </a>
                 </Link>
                 </div>
              </div>
@@ -45,20 +47,3 @@ function SignIn(props) {
 }
 
 export default SignIn;
-
-// export async function getServerSideProps(ctx) {
-//     const {req} = ctx;
-//     const session = await getSession({req});
-//     if(session) {
-//         return {
-//             redirect: { destination: "/"},
-//         };
-//     }
-
-//     return {
-//         props: {
-//             providers: await getProviders(),
-//             csrfToken: await getCsrfToken(ctx),
-//         }
-//     }
-// }
