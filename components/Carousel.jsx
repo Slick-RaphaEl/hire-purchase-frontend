@@ -24,9 +24,9 @@ const ImageCarousel = () => {
           infiniteLoop
           autoPlay
         >
-          <Slide imageId="tailor.jpg" index={0}></Slide>
-          <Slide imageId="taxi.jpg" index={1}></Slide>
-          <Slide imageId="keke.jpg" index={2}></Slide>
+          <Slide imageId="tailor2.jpg" index={0}></Slide>
+          <Slide imageId="car.jpg" index={1}></Slide>
+          <Slide imageId="keke-napep-wedding-2.jpg" index={2}></Slide>
         </Carousel>
         <h2>Giving you the opportunity you wish you had</h2>
       </SelectedSlideContext.Provider>

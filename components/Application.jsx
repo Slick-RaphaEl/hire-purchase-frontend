@@ -41,6 +41,7 @@ const Application = () => {
     // id:Math.random().toString(),
      
     }
+    console.log(profileData)
     //console.log(profileData);
      fetch("http://hire-purchase-backend.herokuapp.com/create-existing-proposal",{
       method:'POST',
@@ -68,7 +69,7 @@ const Application = () => {
         </div>
       </div>
       <form onSubmit={handleSubmit}>
-      <div className=" form-container h-full flex flex-col items-center justify-center ml-10 mx-auto md:mx-auto px-20 mt-10 md:flex-row md:w-3/4">
+      <div className=" form-container h-full flex flex-col items-center justify-center ml-10 mx-auto md:mx-auto px-2 mt-10 md:flex-row md:w-3/4">
         <div className="md:basis-1/2 w-full">
           <div className="flex flex-col">
             <div className="basis-1/2 form-group mb-6">

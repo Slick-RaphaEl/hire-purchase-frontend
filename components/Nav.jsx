@@ -16,10 +16,10 @@ const Nav = () => {
 
   return (
     <div>
-    <nav className="nav-header w-full bg-gray-400  h-20 flex items-center">
+    <nav className="nav-header w-full bg-white  h-20 flex items-center px-4 border-b-8 border-grey-900">
       <div className="w-96">
         <h1 className="text-center text-4xl md:text-3xl md:text-left font-bold">
-          <a className="project-green-text navbar-logo">HIRE</a> PURCHASE
+          <a className="project-green-text">HIRE</a> PURCHASE
         </h1>
       </div>
       <div className=" hidden md:flex  flex-row flex w-3/4 justify-end items-center mr-20 ">
@@ -34,7 +34,7 @@ const Nav = () => {
            session ? (
             <div className="flex flex-row">
             <li className="mx-2">
-            <Link href="/profile" >
+         ``   <Link href="/profile" >
                 <a className="text-lg md:text-base  font-normal text-black">PROFILE</a>
             </Link>
           </li>
@@ -48,7 +48,6 @@ const Nav = () => {
            (
             <li className="mx-2">
                 <a className="text-lg md:text-base font-normal text-black cursor-pointer"
-                onClick={ (e) => router.push('/signIn')}
                 onClick={()=>signIn()}
                 >SIGN IN</a>
           </li>

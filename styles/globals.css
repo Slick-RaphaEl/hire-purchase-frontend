@@ -8,9 +8,9 @@
 #btn{
     background-color: #0CF90C;
 }
-.navbar-logo,.navbar-home{
+/* .navbar-logo,.navbar-home{
 	color:#fff;
-}
+} */
 .nav-items-link{
     border-bottom:1px solid #383838;
     padding:1rem;
@@ -38,4 +38,23 @@
 .nin-input::-webkit-inner-spin-button{
     -webkit-appearance:none;
     }
+
+
+
+
+
+/* Main Body styles */
+.caption-header{
+color:#16FF02;
+font-weight:600;
+}
+
+
+
+
+
+/* Footer styles */
+.footer-bg{
+background-color:red;
+}
 
